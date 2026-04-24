@@ -1,21 +1,23 @@
 """
 Self-Pruning Neural Network using Learnable Gates
 
-This implementation enables a neural network to learn sparse representations
-by associating each weight with a learnable gate parameter.
+This project implements a neural network that learns to prune itself during training
+by associating each weight with a learnable gate parameter. The gating mechanism,
+combined with L1 regularization, enables the model to suppress unimportant connections
+and induce sparsity in a differentiable manner.
 
 Key Components:
 - Soft pruning via sigmoid-gated weights
-- L1 regularization to encourage sparsity
-- Hard pruning via thresholding for evaluation
-- Structured experiments across lambda and threshold values
-- Visualization of sparsity–accuracy tradeoffs
+- L1 regularization to promote sparsity in gate activations
+- Threshold-based hard pruning for evaluation
+- Systematic experimentation across lambda (λ) and threshold values
+- Visualization of sparsity–accuracy trade-offs
 
 Outputs:
-- results/results.csv → experiment data
-- results/plots/ → analysis plots
+- results/results.csv : Structured experiment results
+- results/plots/      : Generated analysis plots
 
-Author: Final Submission
+Author: Nitin Saini
 """
 
 import os
